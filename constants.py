@@ -1,0 +1,5 @@
+DOUGLAS_TEAM_ID = 249112
+RENAN_TEAM_ID = 892402
+THIAGO_TEAM_ID = 47843219
+
+GAME_API_BASE_URL = "https://api.cartola.globo.com/"
