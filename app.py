@@ -22,16 +22,16 @@ def show_teams():
         reverse=True
     )
     
-    return [team.serialize() for team in ordered_teams]
+    return {"data": [team.serialize() for team in ordered_teams]}
 
 @app.route('/team/<nickname>')
 def show_team_by_player_nickname(nickname):
     try:
         team = DataSourceTeam.get_team_by_nickname(nickname)
-        return team.serialize()
+        return {"data": team.serialize()}
     except TeamNotFound as e:
         return str(e), 404
 
 @app.route('/round')
 def show_current_round():
-    return CartolaService().get_current_round().serialize()
+    return {"data": CartolaService().get_current_round().serialize()}
