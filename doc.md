@@ -166,3 +166,17 @@
    ]
 }
 ```
+
+## Comandos Úteis
+
+- Iniciando venv
+
+```
+python3 -m venv .venv
+```
+
+- Desativando venv
+
+```
+source deactivate
+```
